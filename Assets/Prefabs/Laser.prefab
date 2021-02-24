@@ -4852,9 +4852,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Origin: {fileID: 4589676142014296092}
   LR: {fileID: 4589676142014296090}
-  LaserWidth: 1.88
+  LaserWidth: 1.5
   MaxDistance: 20
   ImpulseForce: 2
+  isHitting: 1
   ParticleEffect: {fileID: 4589676140824173048}
 --- !u!120 &4589676142014296090
 LineRenderer:
@@ -4875,7 +4876,7 @@ LineRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2c550ab0c05eaf641924357a67eb967a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4901,7 +4902,7 @@ LineRenderer:
   - {x: 4.8742666, y: 1.9858651, z: 0.6827386}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1.88
+    widthMultiplier: 1.5
     widthCurve:
       serializedVersion: 2
       m_Curve:

@@ -18,7 +18,7 @@ public class Laser : MonoBehaviour
     private Vector3 TargetPosition;
     private ParticleSystem PS;
 
-    private bool isHitting;
+    public bool isHitting;
 
     [Header("Prefabs")] public GameObject ParticleEffect;
     
@@ -31,7 +31,7 @@ public class Laser : MonoBehaviour
     }
 
     void Update()
-    {
+    { 
         SetPositions();
         
         ParticleSystem PS = ParticleEffect.GetComponent<ParticleSystem>();
@@ -48,10 +48,13 @@ public class Laser : MonoBehaviour
             {
                 var direction = TargetPosition - c.transform.position;
                 var length = direction.magnitude;
-                c.GetComponent<Rigidbody>()?.AddForce((ImpulseForce * (- direction.normalized) + Vector3.up * 3) / (length), ForceMode.Impulse);
+                Rigidbody rb = c.GetComponent<Rigidbody>();
+                if(rb != null) rb.AddForce((ImpulseForce * (- direction.normalized) + Vector3.up * 3) / (length), ForceMode.Impulse);
             }
         }
-        
+
+        // LR.enabled = isHitting;
+
     }
 
     void SetTargetPosition()
@@ -74,5 +77,10 @@ public class Laser : MonoBehaviour
         Positions[0] = Origin.position;
         Positions[1] = TargetPosition;
         LR.SetPositions(Positions);
+    }
+
+    void IsHittingEqualsHasTarget()
+    {
+        
     }
 }

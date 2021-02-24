@@ -12,7 +12,8 @@ public class TurretAI : MonoBehaviour
     public Transform ShootTransform;
     public GameObject Bullet;
 
-    [Header("If Is Laser")] public Laser laser;
+    [Header("If Is Laser")]
+    public Laser Laser;
 
     public Transform shootTarget;
     public Vector3 CurrentTarget;
@@ -77,7 +78,6 @@ public class TurretAI : MonoBehaviour
         float heightDeltaAngle = (heightDelta / d).tan().atan().degrees();
 
         float angle =  ((G * d / v.sqr()).asin().degrees() / 2).clamp(-360,360);
-        Debug.Log(BulletMass);
         return angle - heightDeltaAngle;
     }
 }
