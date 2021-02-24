@@ -12,6 +12,7 @@ public class TankAI : MonoBehaviour
 {
     public NavMeshAgent NA;
     public GameObject DestructePaticule;
+    public GameObject SmokeParticule;
     public Transform Destination;
     public List<AudioClip> DestructSounds;
     
@@ -71,6 +72,7 @@ public class TankAI : MonoBehaviour
         Destroy(NA);
         AudioSource.PlayClipAtPoint(DestructSounds[Random.Range(0, DestructSounds.Count)],transform.position,0.5f);
         Destroy(Instantiate(DestructePaticule, transform.position, quaternion.identity),5);
+        Instantiate(SmokeParticule, transform.position, Quaternion.identity, transform);
         GetComponent<Rigidbody>().AddForce(Vector3.up*10,ForceMode.Impulse);
         GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(0.2f,1),Random.Range(0.5f,1),Random.Range(0.3f,1)*1000),ForceMode.Impulse);
         Destroy(this);
