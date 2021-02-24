@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TankSpawner : MonoBehaviour
 {
@@ -27,7 +24,7 @@ public class TankSpawner : MonoBehaviour
 
         if (_timer > _delay)
         {
-            TankAI tank =Instantiate(Tank, transform.position, Quaternion.identity);
+            TankAI tank = Instantiate(Tank, transform.position, Quaternion.identity);
             tank.Destination = Destination;
             tank.shootTarget = Target;
             _timer = 0;

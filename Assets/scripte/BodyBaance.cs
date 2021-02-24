@@ -57,8 +57,8 @@ public class BodyBaance : MonoBehaviour
 
         if (IsKeyBordControlled)
         {
-            Vector3 movemnet = new Vector3(Input.GetAxis("Vertical")*MouveSpeed ,0,Input.GetAxis("Horizontal")*MouveSpeed);
-            transform.position += movemnet;
+            Vector3 movement = new Vector3(Input.GetAxis("Vertical") * MouveSpeed ,0,- Input.GetAxis("Horizontal") * MouveSpeed);
+            transform.position += movement * Time.deltaTime;
             
             Vector3 rotation = Vector3.zero;
             if (Input.GetKey("a"))
