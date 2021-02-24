@@ -10,7 +10,9 @@ public class TurretAI : MonoBehaviour
     public Transform TurretBase;
     public Transform TurretCannon;
     public Transform ShootTransform;
+    public Transform BoutCanon;
     public GameObject Bullet;
+    public GameObject ShootParticul;
 
     [Header("If Is Laser")]
     public Laser Laser;
@@ -42,6 +44,7 @@ public class TurretAI : MonoBehaviour
     public void Shoot()
     {
         if (shootTarget == null) return;
+        Destroy(Instantiate(ShootParticul ,BoutCanon.position, quaternion.identity ),5);
         var bullet = Instantiate(Bullet, ShootTransform.position, ShootTransform.rotation);
         bullet.GetComponent<Rigidbody>().AddForce(ShootTransform.forward * (ShootForce + Random.Range(-ShootForceRandomness, ShootForceRandomness)), ForceMode.Impulse);
     }

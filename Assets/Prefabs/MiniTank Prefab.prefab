@@ -204,7 +204,8 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 0.089072704, z: 1.5445856}
   m_LocalScale: {x: 16.14034, y: 16.14034, z: 16.14034}
-  m_Children: []
+  m_Children:
+  - {fileID: 6651289142910428461}
   m_Father: {fileID: 7969232542743024387}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -257,6 +258,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4687341314827508285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6651289142910428461}
+  m_Layer: 0
+  m_Name: shoottransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6651289142910428461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687341314827508285}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0035, y: 0.1496, z: -0}
+  m_LocalScale: {x: 0.12391307, y: 0.1191472, z: 0.11473432}
+  m_Children: []
+  m_Father: {fileID: 8166327402585602779}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4958274389842778802
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NA: {fileID: 6394542521692997892}
   DestructePaticule: {fileID: 1465521927389598535, guid: 396447ec76a93774abb23682655b010f, type: 3}
+  SmokeParticule: {fileID: 6696071028257133132, guid: 4bdb0b74aa8f7cc4eb805eac49349036, type: 3}
   Destination: {fileID: 0}
   DestructSounds:
   - {fileID: 8300000, guid: 691c5ad5289517b46aec7920797a4d04, type: 3}
@@ -443,9 +475,12 @@ MonoBehaviour:
   TurretBase: {fileID: 7431526958411238076}
   TurretCannon: {fileID: 7969232542743024387}
   ShootTransform: {fileID: 7969232542743024387}
+  BoutCanon: {fileID: 6651289142910428461}
   Bullet: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
-  laser: {fileID: 0}
+  ShootParticul: {fileID: 5926169790204724843, guid: 241e235fe4c0f7143abd0af58a42d6a5, type: 3}
+  Laser: {fileID: 0}
   shootTarget: {fileID: 0}
+  CurrentTarget: {x: 0, y: 0, z: 0}
   ShootForce: 50
   ShootForceRandomness: 5
   RotateSpeed: 0.2
