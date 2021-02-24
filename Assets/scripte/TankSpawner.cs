@@ -26,7 +26,7 @@ public class TankSpawner : MonoBehaviour
         {
             TankAI tank = Instantiate(Tank, transform.position, Quaternion.identity);
             tank.Destination = Destination;
-            tank.shootTarget = Target;
+            tank.TurretAI.shootTarget = Target;
             _timer = 0;
             _delay = Random.Range(DelayToSpawnMin, DelayToSpawnMax);
         }

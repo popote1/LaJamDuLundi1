@@ -380,13 +380,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4951918748915084362}
   - component: {fileID: 1491754790873131383}
+  - component: {fileID: 8805696480123203761}
   - component: {fileID: 6394542521692997892}
   - component: {fileID: 2218910135369319627}
   - component: {fileID: 6999015270368648202}
   - component: {fileID: 9116560566375561317}
   m_Layer: 0
-  m_Name: MiniTank
-  m_TagString: Untagged
+  m_Name: MiniTank Prefab
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,19 +420,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NA: {fileID: 6394542521692997892}
+  DestructePaticule: {fileID: 1465521927389598535, guid: 396447ec76a93774abb23682655b010f, type: 3}
+  Destination: {fileID: 0}
+  DestructSounds:
+  - {fileID: 8300000, guid: 691c5ad5289517b46aec7920797a4d04, type: 3}
+  - {fileID: 8300000, guid: 35565ce8d00b111498d4e3be1aae2b2e, type: 3}
+  Speed: 10
+  TurretAI: {fileID: 8805696480123203761}
+  shootDelay: 2
+--- !u!114 &8805696480123203761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761070880450836208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   TurretBase: {fileID: 7431526958411238076}
   TurretCannon: {fileID: 7969232542743024387}
   ShootTransform: {fileID: 7969232542743024387}
   Bullet: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
-  Destination: {fileID: 0}
-  DestructePaticule: {fileID: 1465521927389598535, guid: 396447ec76a93774abb23682655b010f, type: 3}
+  laser: {fileID: 0}
   shootTarget: {fileID: 0}
-  DestructSounds:
-  - {fileID: 8300000, guid: 691c5ad5289517b46aec7920797a4d04, type: 3}
-  - {fileID: 8300000, guid: 35565ce8d00b111498d4e3be1aae2b2e, type: 3}
-  ShootForce: 10
-  Speed: 10
-  RotateSpeed: 0.01
+  ShootForce: 50
+  ShootForceRandomness: 5
+  RotateSpeed: 0.2
+  IsLaser: 0
 --- !u!195 &6394542521692997892
 NavMeshAgent:
   m_ObjectHideFlags: 0
