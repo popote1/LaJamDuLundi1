@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 3239181935335425087}
   - component: {fileID: 3239181935335425059}
   - component: {fileID: 8676191426425380822}
+  - component: {fileID: -9079248668332585231}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,3 +221,18 @@ TrailRenderer:
   m_MinVertexDistance: 2
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &-9079248668332585231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239181935335425080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e8128bd9c44ba498d9d6d3e3670946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionEffect: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
+  ExplosionRadius: 10
+  ExplosionForce: 100
