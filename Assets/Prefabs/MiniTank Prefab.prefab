@@ -421,6 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NA: {fileID: 6394542521692997892}
   DestructePaticule: {fileID: 1465521927389598535, guid: 396447ec76a93774abb23682655b010f, type: 3}
+  SmokeParticule: {fileID: 6696071028257133132, guid: 4bdb0b74aa8f7cc4eb805eac49349036, type: 3}
   Destination: {fileID: 0}
   DestructSounds:
   - {fileID: 8300000, guid: 691c5ad5289517b46aec7920797a4d04, type: 3}
@@ -440,10 +441,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretBase: {fileID: 7431526958411238076}
-  TurretCannon: {fileID: 7969232542743024387}
+  TurretBaseTransform: {fileID: 7431526958411238076}
+  TurretCannonTransform: {fileID: 7969232542743024387}
   ShootTransform: {fileID: 8166327402585602779}
-  Bullet: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
+  CannonEndTransform: {fileID: 8166327402585602779}
+  BulletPrefab: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
+  ShootParticle: {fileID: 5926169790204724843, guid: 241e235fe4c0f7143abd0af58a42d6a5, type: 3}
   Laser: {fileID: 0}
   shootTarget: {fileID: 0}
   CurrentTarget: {x: 0, y: 0, z: 0}
@@ -484,8 +487,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.558164, y: 1.91, z: 6.2}
-  m_Center: {x: 0, y: 1.04, z: -0.05}
+  m_Size: {x: 4.558164, y: 1, z: 6.2}
+  m_Center: {x: 0, y: 0.8, z: -0.05}
 --- !u!114 &6999015270368648202
 MonoBehaviour:
   m_ObjectHideFlags: 0

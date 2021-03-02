@@ -1738,12 +1738,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmiteur: {fileID: 3907005456218085879}
-  FoodPosition: {fileID: 0}
+  RaycastEmitter: {fileID: 0}
+  FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
-  leverDePat: 6
-  BurstParicule: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
+  leverDePatte: 1
+  BurstParticle: {fileID: 0}
   IsMoving: 0
   CanMove: 0
   PlayAtMove:
@@ -1761,21 +1761,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PlayAtInpact:
+  PlayAtImpact:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3907005456218085877}
-        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
-        m_MethodName: PlaySound2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3907005456218085877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2363,12 +2351,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmiteur: {fileID: 3907005456423915780}
-  FoodPosition: {fileID: 0}
+  RaycastEmitter: {fileID: 0}
+  FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
-  leverDePat: 6
-  BurstParicule: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
+  leverDePatte: 1
+  BurstParticle: {fileID: 0}
   IsMoving: 0
   CanMove: 0
   PlayAtMove:
@@ -2386,21 +2374,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PlayAtInpact:
+  PlayAtImpact:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3907005456423915778}
-        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
-        m_MethodName: PlaySound2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3907005456423915778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3762,12 +3738,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmiteur: {fileID: 3907005456866403326}
-  FoodPosition: {fileID: 0}
+  RaycastEmitter: {fileID: 0}
+  FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
-  leverDePat: 6
-  BurstParicule: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
+  leverDePatte: 1
+  BurstParticle: {fileID: 0}
   IsMoving: 0
   CanMove: 0
   PlayAtMove:
@@ -3785,21 +3761,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PlayAtInpact:
+  PlayAtImpact:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3907005456866403324}
-        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
-        m_MethodName: PlaySound2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3907005456866403324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3894,12 +3858,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmiteur: {fileID: 3907005456907823458}
-  FoodPosition: {fileID: 0}
+  RaycastEmitter: {fileID: 0}
+  FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
-  leverDePat: 6
-  BurstParicule: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
+  leverDePatte: 1
+  BurstParticle: {fileID: 0}
   IsMoving: 0
   CanMove: 0
   PlayAtMove:
@@ -3917,21 +3881,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PlayAtInpact:
+  PlayAtImpact:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3907005456907823456}
-        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
-        m_MethodName: PlaySound2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3907005456907823456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5572,14 +5524,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmiteur: {fileID: 3907005457685816724}
-  FoodPosition: {fileID: 0}
+  RaycastEmitter: {fileID: 3907005457685816724}
+  FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
-  leverDePat: 6
-  BurstParicule: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
+  leverDePatte: 1
+  BurstParticle: {fileID: 6089836917523930597, guid: f7d558d718493d5488a166734f7f2bb4, type: 3}
   IsMoving: 0
-  CanMove: 0
+  CanMove: 1
   PlayAtMove:
     m_PersistentCalls:
       m_Calls:
@@ -5595,21 +5547,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PlayAtInpact:
+  PlayAtImpact:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3907005457685816722}
-        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
-        m_MethodName: PlaySound2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3907005457685816722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5674,12 +5614,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmiteur: {fileID: 3907005457700323150}
-  FoodPosition: {fileID: 0}
+  RaycastEmitter: {fileID: 0}
+  FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
-  leverDePat: 6
-  BurstParicule: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
+  leverDePatte: 1
+  BurstParticle: {fileID: 0}
   IsMoving: 0
   CanMove: 0
   PlayAtMove:
@@ -5697,21 +5637,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PlayAtInpact:
+  PlayAtImpact:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3907005457700323148}
-        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
-        m_MethodName: PlaySound2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3907005457700323148
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BodyBaance : MonoBehaviour
@@ -43,7 +41,9 @@ public class BodyBaance : MonoBehaviour
         Vector3 moyen = (ContactArriereDroit + ContactArriereGauche + ContactAvantDroit + ContactAvantGauche) / 4;
 
         //transform.position = Vector3.Lerp(transform.position , Vector3.Project(moyen , normal*DistanceToGround), 0.2f);
-        transform.position =new Vector3(transform.position.x , Mathf.Lerp(transform.position.y,moyen.y+DistanceToGround , 0.1f),transform.position.z);
+        var pos = transform.position;
+        transform.position = new Vector3(pos.x , Mathf.Lerp(pos.y,moyen.y + DistanceToGround, 0.1f), pos.z);
+        
         if (IsUsDebug)
         {
             Debug.DrawLine(RaycastavntGauche.position, ContactAvantGauche, Color.red);

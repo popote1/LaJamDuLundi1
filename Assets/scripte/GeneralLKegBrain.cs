@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GeneralLKegBrain : MonoBehaviour
@@ -15,8 +12,8 @@ public class GeneralLKegBrain : MonoBehaviour
 
     private void Update()
     {
-        if (AvantDroite.IsMoving) AvantGauche.CanMove = false;else AvantGauche.CanMove =true;
-        if (AvantGauche.IsMoving) AvantDroite.CanMove = false;else AvantDroite.CanMove = true;
+        AvantGauche.CanMove = !AvantDroite.IsMoving;
+        AvantDroite.CanMove = !AvantGauche.IsMoving;
         if (MidDroite.IsMoving)
         {
             MidGauche.CanMove = false;
@@ -45,8 +42,8 @@ public class GeneralLKegBrain : MonoBehaviour
             AvantGauche.CanMove = true;
             
         }
-        if (BackDroite.IsMoving) BackGauche.CanMove = false;else BackGauche.CanMove = true;
-        if (BackGauche.IsMoving) BackDroite.CanMove = false;else BackDroite.CanMove = true;
+        BackGauche.CanMove = !BackDroite.IsMoving;
+        BackDroite.CanMove = !BackGauche.IsMoving;
 
     }
 }

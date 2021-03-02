@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5949453734551522827}
   - component: {fileID: 1827640666713120171}
   m_Layer: 0
-  m_Name: EplosionParticuleMaxiVersion
+  m_Name: ExplosionParticuleMaxiVersion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 5
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4875,7 +4875,7 @@ GameObject:
   - component: {fileID: 4074099675562321036}
   - component: {fileID: 9106004112484086241}
   m_Layer: 0
-  m_Name: DustExplosionParticul
+  m_Name: DustExplosionParticule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

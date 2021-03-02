@@ -1,5 +1,3 @@
-
-using System;
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
@@ -69,7 +67,8 @@ public class TankAI : MonoBehaviour
     
     public void Dead()
     {
-        Destroy(NA);
+        // Destroy(NA);
+        NA.enabled = false;
         AudioSource.PlayClipAtPoint(DestructSounds[Random.Range(0, DestructSounds.Count)],transform.position,0.5f);
         Destroy(Instantiate(DestructePaticule, transform.position, quaternion.identity),5);
         Instantiate(SmokeParticule, transform.position, Quaternion.identity, transform);

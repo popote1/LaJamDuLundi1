@@ -18,7 +18,7 @@ public class EnemyDetector : MonoBehaviour
 
     private void Update()
     {
-        // ResetTargetIfDistanceIsTooFar();
+        ResetTargetIfDistanceIsTooFar();
     }
 
     private void OnTriggerEnter(Collider other)

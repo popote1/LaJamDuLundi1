@@ -154,6 +154,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4202547112299498051}
   - component: {fileID: 6470101611054263059}
+  - component: {fileID: 8065183938985811110}
+  - component: {fileID: 490282023407399113}
   m_Layer: 0
   m_Name: Crab Tourelle
   m_TagString: Untagged
@@ -190,17 +192,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretBase: {fileID: 4202547112299498051}
-  TurretCannon: {fileID: 1794135627954408649}
+  TurretBaseTransform: {fileID: 4202547112299498051}
+  TurretCannonTransform: {fileID: 1794135627954408649}
   ShootTransform: {fileID: 7674426161984881929}
-  Bullet: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
+  CannonEndTransform: {fileID: 7674426161984881929}
+  BulletPrefab: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
+  ShootParticle: {fileID: 5926169790204724843, guid: 241e235fe4c0f7143abd0af58a42d6a5, type: 3}
   Laser: {fileID: 8714731099791916165}
   shootTarget: {fileID: 0}
   CurrentTarget: {x: 0, y: 0, z: 0}
   ShootForce: 10
   ShootForceRandomness: 1
-  RotateSpeed: 0.2
+  RotateSpeed: 0.05
   IsLaser: 1
+--- !u!135 &8065183938985811110
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986868517335827100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 80
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &490282023407399113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986868517335827100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefa60e981df48e78217aa7b1650493d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxDetectionDistance: 80
 --- !u!1 &5161474100240329532
 GameObject:
   m_ObjectHideFlags: 0

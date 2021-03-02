@@ -30,6 +30,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 981666346455986327}
   - {fileID: 981666346022798480}
   m_Father: {fileID: 981666345773258885}
   m_RootOrder: 0
@@ -143,12 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretBase: {fileID: 981666345556046719}
-  TurretCannon: {fileID: 981666346455986327}
+  TurretBaseTransform: {fileID: 981666345773258885}
+  TurretCannonTransform: {fileID: 981666346455986327}
   ShootTransform: {fileID: 981666346455986327}
-  BoutCanon: {fileID: 0}
-  Bullet: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
-  ShootParticul: {fileID: 0}
+  CannonEndTransform: {fileID: 981666346455986327}
+  BulletPrefab: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
+  ShootParticle: {fileID: 5926169790204724843, guid: 241e235fe4c0f7143abd0af58a42d6a5, type: 3}
   Laser: {fileID: 3615927010667947102}
   shootTarget: {fileID: 0}
   CurrentTarget: {x: 0, y: 0, z: 0}
@@ -210,11 +211,10 @@ Transform:
   m_GameObject: {fileID: 981666346022798492}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.878, z: 0}
-  m_LocalScale: {x: 0.66938, y: 1.714416, z: 0.66938}
-  m_Children:
-  - {fileID: 981666346455986327}
+  m_LocalScale: {x: 0.66, y: 1.714416, z: 0.66}
+  m_Children: []
   m_Father: {fileID: 981666345556046719}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &981666346022798481
 MeshFilter:
@@ -304,13 +304,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981666346455986323}
-  m_LocalRotation: {x: 0.14975059, y: -0, z: -0, w: 0.9887238}
-  m_LocalPosition: {x: 0, y: 0.51212776, z: 0}
-  m_LocalScale: {x: 1, y: 0.30004, z: 3.0885}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 1.7352066, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 2}
   m_Children: []
-  m_Father: {fileID: 981666346022798480}
+  m_Father: {fileID: 981666345556046719}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 17.225, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!33 &981666346455986324
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -394,15 +394,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2c550ab0c05eaf641924357a67eb967a, type: 2}
     - target: {fileID: 4589676140824173051, guid: 1dfb29381a84fec49a48273c140f652a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.491785
+      value: 12.412344
       objectReference: {fileID: 0}
     - target: {fileID: 4589676140824173051, guid: 1dfb29381a84fec49a48273c140f652a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.887932
+      value: 12.524113
       objectReference: {fileID: 0}
     - target: {fileID: 4589676140824173051, guid: 1dfb29381a84fec49a48273c140f652a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.633366
+      value: 14.908644
       objectReference: {fileID: 0}
     - target: {fileID: 4589676142014296089, guid: 1dfb29381a84fec49a48273c140f652a, type: 3}
       propertyPath: m_Name
@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589676142014296090, guid: 1dfb29381a84fec49a48273c140f652a, type: 3}
       propertyPath: m_Positions.Array.data[0].y
-      value: 1.756
+      value: 1.7352066
       objectReference: {fileID: 0}
     - target: {fileID: 4589676142014296090, guid: 1dfb29381a84fec49a48273c140f652a, type: 3}
       propertyPath: m_Positions.Array.data[0].z
@@ -438,7 +438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589676142014296090, guid: 1dfb29381a84fec49a48273c140f652a, type: 3}
       propertyPath: m_Positions.Array.data[1].z
-      value: 1.5294819
+      value: 1.2456793
       objectReference: {fileID: 0}
     - target: {fileID: 4589676142014296090, guid: 1dfb29381a84fec49a48273c140f652a, type: 3}
       propertyPath: m_Parameters.widthMultiplier
