@@ -18254,7 +18254,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1402807462603884504, guid: 73b83e34ad9e5ba47a5dc3957865ac4e, type: 3}
   m_PrefabInstance: {fileID: 3907005456895783766}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &881718176
+--- !u!135 &881718177
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881718175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 100
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &881718178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18267,19 +18280,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxDetectionDistance: 70
---- !u!135 &881718177
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881718175}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 100
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &883054981
 GameObject:
   m_ObjectHideFlags: 0
