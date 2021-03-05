@@ -3,17 +3,17 @@ using UME;
 using UnityEngine;
 
 [RequireComponent(typeof(SphereCollider))]
-[RequireComponent(typeof(TurretAI))]
+[RequireComponent(typeof(Turret))]
 public class EnemyDetector : MonoBehaviour
 {
-    private TurretAI TurretAI;
+    private Turret Turret;
     public float MaxDetectionDistance = 40;
     private void Start()
     {
         var SC = GetComponent<SphereCollider>();
         SC.isTrigger = true;
         SC.radius = MaxDetectionDistance;
-        TurretAI = GetComponent<TurretAI>();
+        Turret = GetComponent<Turret>();
     }
 
     private void Update()
@@ -23,17 +23,17 @@ public class EnemyDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (TurretAI.shootTarget == null && other.CompareTag("Enemy"))
-            TurretAI.shootTarget = other.transform;
+        if (Turret.shootTarget == null && other.CompareTag("Enemy"))
+            Turret.shootTarget = other.transform;
     }
 
     void ResetTargetIfDistanceIsTooFar()
     {
-        if (TurretAI.shootTarget == null) return;
-        float distance = (transform.position - TurretAI.shootTarget.position).length();
+        if (Turret.shootTarget == null) return;
+        float distance = (transform.position - Turret.shootTarget.position).length();
         if (distance > MaxDetectionDistance)
         {
-            TurretAI.shootTarget = null;
+            Turret.shootTarget = null;
             //TurretAI.Laser.isHitting = false; // disables laser
         }
     }

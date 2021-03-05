@@ -154,8 +154,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4202547112299498051}
   - component: {fileID: 6470101611054263059}
-  - component: {fileID: 8065183938985811110}
   - component: {fileID: 490282023407399113}
+  - component: {fileID: 4861957758951707351}
+  - component: {fileID: 8065183938985811110}
   m_Layer: 0
   m_Name: Crab Tourelle
   m_TagString: Untagged
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4986868517335827100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
   m_Name: 
@@ -205,19 +206,6 @@ MonoBehaviour:
   ShootForceRandomness: 1
   RotateSpeed: 0.05
   IsLaser: 1
---- !u!135 &8065183938985811110
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4986868517335827100}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 80
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &490282023407399113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +219,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxDetectionDistance: 80
+--- !u!114 &4861957758951707351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986868517335827100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a35270e0544667aab017dc39155893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TurretBaseTransform: {fileID: 4202547112299498051}
+  TurretCannonTransform: {fileID: 1794135627954408649}
+  ShootTransform: {fileID: 1794135629591571876}
+  CannonEndTransform: {fileID: 7674426161984881929}
+  shootTarget: {fileID: 0}
+  CurrentTarget: {x: 0, y: 0, z: 0}
+  RotateSpeed: 0.05
+  Laser: {fileID: 8714731099791916165}
+--- !u!135 &8065183938985811110
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986868517335827100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 80
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5161474100240329532
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class CannonTurretAI : Turret
     [ContextMenu("Shoot")]
     public override void Shoot()
     {
+        Debug.Log("Shooted");
         if (shootTarget == null) return;
         Destroy(Instantiate(ShootParticle ,CannonEndTransform.position, Quaternion.identity),5);
         var bullet = Instantiate(BulletPrefab, ShootTransform.position, ShootTransform.rotation);

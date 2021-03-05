@@ -107,8 +107,9 @@ GameObject:
   m_Component:
   - component: {fileID: 981666345773258885}
   - component: {fileID: 5600228532591750470}
-  - component: {fileID: 8930221173208411579}
   - component: {fileID: 1535997950647760878}
+  - component: {fileID: 8930221173208411579}
+  - component: {fileID: 8052272505131397406}
   m_Layer: 2
   m_Name: Turret Test
   m_TagString: Untagged
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981666345773258882}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
   m_Name: 
@@ -157,19 +158,6 @@ MonoBehaviour:
   ShootForceRandomness: 1
   RotateSpeed: 0.2
   IsLaser: 1
---- !u!135 &8930221173208411579
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981666345773258882}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 40
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1535997950647760878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +171,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxDetectionDistance: 40
+--- !u!135 &8930221173208411579
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981666345773258882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 40
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8052272505131397406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981666345773258882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a35270e0544667aab017dc39155893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TurretBaseTransform: {fileID: 981666345556046719}
+  TurretCannonTransform: {fileID: 981666346455986327}
+  ShootTransform: {fileID: 981666346455986327}
+  CannonEndTransform: {fileID: 981666346455986327}
+  shootTarget: {fileID: 0}
+  CurrentTarget: {x: 0, y: 0, z: 0}
+  RotateSpeed: 0.05
+  Laser: {fileID: 3615927010667947102}
 --- !u!1 &981666346022798492
 GameObject:
   m_ObjectHideFlags: 0

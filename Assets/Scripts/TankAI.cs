@@ -17,7 +17,7 @@ public class TankAI : MonoBehaviour
 
     public float Speed = 10;
 
-    public TurretAI TurretAI;
+    public CannonTurretAI TurretAI;
 
     private float _timer;
     public float shootDelay = 2;
@@ -43,18 +43,14 @@ public class TankAI : MonoBehaviour
             Physics.Raycast(ray, out var hit, Mathf.Infinity);
             GoTo(hit.point);
         }
-
-        if (!TurretAI.IsLaser)
+        
+        _timer += Time.deltaTime;
+        if (_timer > shootDelay)
         {
-            _timer += Time.deltaTime;
-            if (_timer > shootDelay)
-            {
-                TurretAI.Shoot();
-                _timer = 0;
-            }
+            TurretAI.Shoot();
+            _timer = 0;
         }
         
-
     }
 
     void GoTo(Vector3 position) => NA.SetDestination(position);
@@ -62,7 +58,7 @@ public class TankAI : MonoBehaviour
     void SetParameters()
     {
         NA.speed = Speed;
-        TurretAI = GetComponent<TurretAI>();
+        TurretAI = GetComponent<CannonTurretAI>();
     }
     
     public void Dead()
