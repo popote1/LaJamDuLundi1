@@ -27,6 +27,8 @@ public class BulletScripte : MonoBehaviour
             Destroy(Instantiate(Particule, other.contacts[0].point, Quaternion.identity),5);
             Instantiate(Decal, other.contacts[0].point+Vector3.up, Quaternion.Euler(new Vector3(90,0,0)));
             Destroy(gameObject);
+            
+            
         }
     }
 }
