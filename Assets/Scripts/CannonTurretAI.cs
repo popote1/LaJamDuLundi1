@@ -61,7 +61,7 @@ public class CannonTurretAI : Turret
         float heightDelta = shootTarget.position.y - ShootTransform.position.y;
         float heightDeltaAngle = (heightDelta / d).tan().atan().degrees();
 
-        float angle =  ((G * d / v.sqr()).asin().degrees() / 2).clamp(-360,360 * UnityMathematicsExtensions.PI);
+        float angle =  ((G * d / v.sqr()).asin().degrees() / 2).clamp(0,360 * UnityMathematicsExtensions.PI);
         return angle - heightDeltaAngle;
     }
 }

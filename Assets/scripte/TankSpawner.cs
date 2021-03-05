@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class TankSpawner : MonoBehaviour
 {
     public TankAI Tank;
@@ -8,7 +9,7 @@ public class TankSpawner : MonoBehaviour
     public float DelayToSpawnMin;
     public float DelayToSpawnMax;
 
-    private float _delay;
+    public float _delay = 2;
     private float _timer;
     
     
@@ -24,10 +25,10 @@ public class TankSpawner : MonoBehaviour
 
         if (_timer > _delay)
         {
-            TankAI tank = Instantiate(Tank, transform.position, Quaternion.identity);
+            _timer = 0;
+            TankAI tank = Instantiate(Tank, transform.position, Tank.transform.rotation);
             tank.Destination = Destination;
             tank.TurretAI.shootTarget = Target;
-            _timer = 0;
             _delay = Random.Range(DelayToSpawnMin, DelayToSpawnMax);
         }
     }

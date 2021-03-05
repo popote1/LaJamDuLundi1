@@ -106,7 +106,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 981666345773258885}
-  - component: {fileID: 5600228532591750470}
   - component: {fileID: 1535997950647760878}
   - component: {fileID: 8930221173208411579}
   - component: {fileID: 8052272505131397406}
@@ -133,31 +132,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5600228532591750470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981666345773258882}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TurretBaseTransform: {fileID: 981666345773258885}
-  TurretCannonTransform: {fileID: 981666346455986327}
-  ShootTransform: {fileID: 981666346455986327}
-  CannonEndTransform: {fileID: 981666346455986327}
-  BulletPrefab: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
-  ShootParticle: {fileID: 5926169790204724843, guid: 241e235fe4c0f7143abd0af58a42d6a5, type: 3}
-  Laser: {fileID: 3615927010667947102}
-  shootTarget: {fileID: 0}
-  CurrentTarget: {x: 0, y: 0, z: 0}
-  ShootForce: 10
-  ShootForceRandomness: 1
-  RotateSpeed: 0.2
-  IsLaser: 1
 --- !u!114 &1535997950647760878
 MonoBehaviour:
   m_ObjectHideFlags: 0

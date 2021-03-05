@@ -14,15 +14,8 @@ public abstract class Turret : MonoBehaviour
 
     [Header("Variables")]
     [Range(0,1)] public float RotateSpeed = 0.05f;
+    
 
-
-    // Constants for Ballistic Computation
-    private float G => Physics.gravity.y;
-
-
-    //Ballistic
-    private float BulletMass;
-        
     void Start() => SetParameters();
 
     void Update()
@@ -41,5 +34,5 @@ public abstract class Turret : MonoBehaviour
         if (CannonEndTransform == null) CannonEndTransform = ShootTransform; // Prevents Null Reference
     }
 
-    protected float ComputeShootDistance() => (shootTarget.position - ShootTransform.position).magnitude;
+    public float ComputeShootDistance() => (shootTarget.position - ShootTransform.position).magnitude;
 }

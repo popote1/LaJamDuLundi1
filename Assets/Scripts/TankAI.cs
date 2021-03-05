@@ -16,6 +16,7 @@ public class TankAI : MonoBehaviour
     
 
     public float Speed = 10;
+    public float MinDistanceToShoot = 80;
 
     public CannonTurretAI TurretAI;
 
@@ -45,12 +46,17 @@ public class TankAI : MonoBehaviour
         }
         
         _timer += Time.deltaTime;
-        if (_timer > shootDelay)
+        if (TurretAI.shootTarget != null)
         {
-            TurretAI.Shoot();
-            _timer = 0;
+            if (TurretAI.ComputeShootDistance() < MinDistanceToShoot)
+            {
+                if (_timer > shootDelay)
+                {
+                    TurretAI.Shoot();
+                    _timer = 0;
+                }
+            }
         }
-        
     }
 
     void GoTo(Vector3 position) => NA.SetDestination(position);

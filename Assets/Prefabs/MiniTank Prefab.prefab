@@ -380,7 +380,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4951918748915084362}
   - component: {fileID: 1491754790873131383}
-  - component: {fileID: 8805696480123203761}
   - component: {fileID: 8620983606611283084}
   - component: {fileID: 6394542521692997892}
   - component: {fileID: 2218910135369319627}
@@ -428,33 +427,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 691c5ad5289517b46aec7920797a4d04, type: 3}
   - {fileID: 8300000, guid: 35565ce8d00b111498d4e3be1aae2b2e, type: 3}
   Speed: 10
-  TurretAI: {fileID: 8805696480123203761}
+  MinDistanceToShoot: 80
+  TurretAI: {fileID: 8620983606611283084}
   shootDelay: 2
---- !u!114 &8805696480123203761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5761070880450836208}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TurretBaseTransform: {fileID: 7431526958411238076}
-  TurretCannonTransform: {fileID: 7969232542743024387}
-  ShootTransform: {fileID: 8166327402585602779}
-  CannonEndTransform: {fileID: 8166327402585602779}
-  BulletPrefab: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
-  ShootParticle: {fileID: 5926169790204724843, guid: 241e235fe4c0f7143abd0af58a42d6a5, type: 3}
-  Laser: {fileID: 0}
-  shootTarget: {fileID: 0}
-  CurrentTarget: {x: 0, y: 0, z: 0}
-  ShootForce: 50
-  ShootForceRandomness: 5
-  RotateSpeed: 0.2
-  IsLaser: 0
 --- !u!114 &8620983606611283084
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(EnemyDetector))]
 public class LaserTurretAI : Turret
 {
 

@@ -202,9 +202,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6416739485519895654}
-  - component: {fileID: 5336707293477982606}
   - component: {fileID: 6827130998216646912}
   - component: {fileID: 8271818415574670929}
+  - component: {fileID: 5263379183263930588}
   m_Layer: 0
   m_Name: RobotCrabeTourelleLazer
   m_TagString: Untagged
@@ -230,31 +230,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5336707293477982606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5928714289359783644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fad6a98586e9a24ab4b90f34851a555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TurretBase: {fileID: 6416739485519895654}
-  TurretCannon: {fileID: 1769717739547907904}
-  ShootTransform: {fileID: 7553676832030269711}
-  BoutCanon: {fileID: 0}
-  Bullet: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
-  ShootParticul: {fileID: 0}
-  Laser: {fileID: 2842774572428353423}
-  shootTarget: {fileID: 0}
-  CurrentTarget: {x: 0, y: 0, z: 0}
-  ShootForce: 10
-  ShootForceRandomness: 1
-  RotateSpeed: 0.2
-  IsLaser: 1
 --- !u!135 &6827130998216646912
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -281,6 +256,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxDetectionDistance: 100
+--- !u!114 &5263379183263930588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5928714289359783644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a35270e0544667aab017dc39155893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TurretBaseTransform: {fileID: 6416739485519895654}
+  TurretCannonTransform: {fileID: 1769717739547907904}
+  ShootTransform: {fileID: 7553676832030269711}
+  CannonEndTransform: {fileID: 7553676832030269711}
+  shootTarget: {fileID: 0}
+  CurrentTarget: {x: 0, y: 0, z: 0}
+  RotateSpeed: 0.05
+  Laser: {fileID: 2842774572428353423}
 --- !u!1 &7636015511031920398
 GameObject:
   m_ObjectHideFlags: 0
