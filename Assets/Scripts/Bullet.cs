@@ -3,8 +3,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject ExplosionEffect;
-    public float ExplosionRadius = 10;
-    public float ExplosionForce = 100;
+    public float ExplosionRadius = 5;
+    public float ExplosionForce = 10;
 
 
     
@@ -23,11 +23,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        Destroy(Instantiate(ExplosionEffect, other.contacts[0].point,Quaternion.LookRotation(other.GetContact(0).normal)), 5);
+        Instantiate(Decal, other.contacts[0].point + Vector3.up, Quaternion.Euler(new Vector3(90,0,0)));
+        
         if (!other.transform.CompareTag("Enemy"))
         {
-            Destroy(Instantiate(ExplosionEffect, other.contacts[0].point,Quaternion.LookRotation(other.GetContact(0).normal)), 5);
-            Instantiate(Decal, other.contacts[0].point + Vector3.up, Quaternion.Euler(new Vector3(90,0,0)));
-
             var colliders = Physics.OverlapSphere(transform.position, ExplosionRadius);
             foreach (var c in colliders)
             {
