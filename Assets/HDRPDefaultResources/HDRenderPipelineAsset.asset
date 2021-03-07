@@ -230,7 +230,7 @@ MonoBehaviour:
       m_SchemaId:
         m_Id: With3Levels
     supportDecals: 1
-    supportDecalLayers: 0
+    supportDecalLayers: 1
     decalLayerName0: Decal Layer default
     decalLayerName1: Tank
     decalLayerName2: Decal Layer 2
@@ -276,7 +276,7 @@ MonoBehaviour:
     hdShadowInitParams:
       maxShadowRequests: 128
       directionalShadowsDepthBits: 32
-      shadowFilteringQuality: 1
+      shadowFilteringQuality: 2
       punctualLightShadowAtlas:
         shadowAtlasResolution: 4096
         shadowAtlasDepthBits: 32
@@ -351,7 +351,7 @@ MonoBehaviour:
       ChromaticAberrationMaxSamples: 03000000060000000c000000
     lightSettings:
       useContactShadow:
-        m_Values: 000000
+        m_Values: 010101
         m_SchemaId:
           m_Id: With3Levels
     maximumLODLevel:
