@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class FoodActivator : MonoBehaviour
+public class FootActivator : MonoBehaviour
 {
-   public UnityEvent OnTutch ;
+   public UnityEvent OnTouch ;
 
    private Rigidbody rb;
 
@@ -17,10 +14,10 @@ public class FoodActivator : MonoBehaviour
 
    private void OnCollisionEnter(Collision other)
    {
-      if (other.collider.CompareTag("Food"))
+      if (other.collider.CompareTag("Foot"))
       {
          rb.constraints = RigidbodyConstraints.None;
-         OnTutch.Invoke();
+         OnTouch.Invoke();
          Destroy(this);
       }
    }

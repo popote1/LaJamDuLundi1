@@ -1,15 +1,16 @@
 using UnityEngine;
 
-public class BodyBaance : MonoBehaviour
+public class BodyBalance : MonoBehaviour
 {
     public bool IsUsDebug;
     public bool IsKeyBordControlled;
-    public float MouveSpeed=0.1f;
-    public float DistanceToGround=5;
-    public Transform RaycastavntGauche;
-    public Transform RaycastavntDroit;
-    public Transform RaycastarriereGauche;
-    public Transform RaycastarriereDroit;
+    public float MoveSpeed = 0.1f;
+    public float DistanceToGround = 5;
+    
+    public Transform RaycastAvantGauche;
+    public Transform RaycastAvantDroit;
+    public Transform RaycastArriereGauche;
+    public Transform RaycastArriereDroit;
 
     private Vector3 ContactAvantGauche;
     private Vector3 ContactAvantDroit;
@@ -24,10 +25,10 @@ public class BodyBaance : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(RaycastavntGauche.position, RaycastavntGauche.forward, out hit))  ContactAvantGauche = hit.point;
-        if (Physics.Raycast(RaycastavntDroit.position, RaycastavntDroit.forward, out hit)) ContactAvantDroit = hit.point;
-        if (Physics.Raycast(RaycastarriereGauche.position, RaycastarriereGauche.forward, out hit)) ContactArriereGauche = hit.point;
-        if (Physics.Raycast(RaycastarriereDroit.position, RaycastarriereDroit.forward, out hit)) ContactArriereDroit = hit.point;
+        if (Physics.Raycast(RaycastAvantGauche.position, RaycastAvantGauche.forward, out hit))  ContactAvantGauche = hit.point;
+        if (Physics.Raycast(RaycastAvantDroit.position, RaycastAvantDroit.forward, out hit)) ContactAvantDroit = hit.point;
+        if (Physics.Raycast(RaycastArriereGauche.position, RaycastArriereGauche.forward, out hit)) ContactArriereGauche = hit.point;
+        if (Physics.Raycast(RaycastArriereDroit.position, RaycastArriereDroit.forward, out hit)) ContactArriereDroit = hit.point;
         
 
         Vector3 avant = ContactAvantGauche - ContactAvantDroit;
@@ -46,10 +47,10 @@ public class BodyBaance : MonoBehaviour
         
         if (IsUsDebug)
         {
-            Debug.DrawLine(RaycastavntGauche.position, ContactAvantGauche, Color.red);
-            Debug.DrawLine(RaycastavntDroit.position, ContactAvantDroit, Color.red);
-            Debug.DrawLine(RaycastarriereGauche.position, ContactArriereGauche, Color.red);
-            Debug.DrawLine(RaycastarriereDroit.position, ContactArriereDroit, Color.red);
+            Debug.DrawLine(RaycastAvantGauche.position, ContactAvantGauche, Color.red);
+            Debug.DrawLine(RaycastAvantDroit.position, ContactAvantDroit, Color.red);
+            Debug.DrawLine(RaycastArriereGauche.position, ContactArriereGauche, Color.red);
+            Debug.DrawLine(RaycastArriereDroit.position, ContactArriereDroit, Color.red);
             Debug.DrawLine(transform.position, moyen, Color.magenta);
         }
 
@@ -57,17 +58,17 @@ public class BodyBaance : MonoBehaviour
 
         if (IsKeyBordControlled)
         {
-            Vector3 movement = new Vector3(Input.GetAxis("Vertical") * MouveSpeed ,0,- Input.GetAxis("Horizontal") * MouveSpeed);
+            Vector3 movement = new Vector3(Input.GetAxis("Vertical") * MoveSpeed ,0,- Input.GetAxis("Horizontal") * MoveSpeed);
             transform.position += movement * Time.deltaTime;
             
             Vector3 rotation = Vector3.zero;
-            if (Input.GetKey("a"))
+            if (Input.GetKey(KeyCode.A))
             {
-                rotation +=Vector3.up;
+                rotation += Vector3.up;
             }
-            else if (Input.GetKey("e"))
+            else if (Input.GetKey(KeyCode.E))
             {
-                rotation +=Vector3.down;
+                rotation += Vector3.down;
             }
 
             transform.eulerAngles += rotation;

@@ -13,7 +13,7 @@ public class LegController : MonoBehaviour
     
     public float LegMovementSpeed;
     public float DistanceToMoveFood = 1;
-    public float leverDePatte = 1;
+    public float LeverDePatte = 1;
     
     public GameObject BurstParticle;
     
@@ -68,7 +68,7 @@ public class LegController : MonoBehaviour
                 float timeInLerp = _timer / LegMovementSpeed;
                 Vector3 footPos = new Vector3(
                     math.lerp(_oldFootPos.x, _collisionPose.x,timeInLerp),
-                    (_oldFootPos.y+ _collisionPose.y) / 2 + function(timeInLerp,leverDePatte),
+                    (_oldFootPos.y+ _collisionPose.y) / 2 + function(timeInLerp,LeverDePatte),
                     math.lerp(_oldFootPos.z, _collisionPose.z,timeInLerp));
                 FootPosition.position = footPos;
                 

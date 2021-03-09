@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,8 +11,7 @@ public class SoundPlayer : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -22,7 +20,6 @@ public class SoundPlayer : MonoBehaviour
     public void PlaySound1()
     {
         AudioSource.PlayClipAtPoint(Audio1[Random.Range(0, Audio1.Count)],transform.position);
-
     }
     public void PlaySound2()
     {

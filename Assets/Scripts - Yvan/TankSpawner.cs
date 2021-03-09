@@ -9,7 +9,7 @@ public class TankSpawner : MonoBehaviour
     public float DelayToSpawnMin;
     public float DelayToSpawnMax;
 
-    public float _delay = 2;
+    public float _delay = 0 ;
     private float _timer;
     
     

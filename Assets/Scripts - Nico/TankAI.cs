@@ -9,8 +9,8 @@ using Random = UnityEngine.Random;
 public class TankAI : MonoBehaviour
 {
     public NavMeshAgent NA;
-    public GameObject DestructePaticule;
-    public GameObject SmokeParticule;
+    public GameObject DestructionParticle;
+    public GameObject SmokeParticle;
     public Transform Destination;
     public List<AudioClip> DestructSounds;
     
@@ -71,9 +71,11 @@ public class TankAI : MonoBehaviour
     {
         // Destroy(NA);
         NA.enabled = false;
-        AudioSource.PlayClipAtPoint(DestructSounds[Random.Range(0, DestructSounds.Count)],transform.position,0.5f);
-        Destroy(Instantiate(DestructePaticule, transform.position, quaternion.identity),5);
-        Instantiate(SmokeParticule, transform.position, Quaternion.identity, transform);
+        var pos = transform.position;
+        
+        AudioSource.PlayClipAtPoint(DestructSounds[Random.Range(0, DestructSounds.Count)],pos,0.5f);
+        Destroy(Instantiate(DestructionParticle, pos, quaternion.identity),5);
+        Instantiate(SmokeParticle, pos, Quaternion.identity, transform);
         GetComponent<Rigidbody>().AddForce(Vector3.up*10,ForceMode.Impulse);
         GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(0.2f,1),Random.Range(0.5f,1),Random.Range(0.3f,1)*1000),ForceMode.Impulse);
         Destroy(this);

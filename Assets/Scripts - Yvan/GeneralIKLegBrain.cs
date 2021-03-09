@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GeneralLKegBrain : MonoBehaviour
+public class GeneralIKLegBrain : MonoBehaviour
 {
     public LegController AvantGauche;
     public LegController AvantDroite;
@@ -25,8 +25,6 @@ public class GeneralLKegBrain : MonoBehaviour
             MidGauche.CanMove = true;
             AvantDroite.CanMove = true;
             BackDroite.CanMove = true;
-            
-            
         }
 
         if (MidGauche.IsMoving)
