@@ -1,6 +1,7 @@
 ﻿using UME;
 using Unity.Mathematics;
 using UnityEngine;
+using static UME.UnityMathematicsExtensions;
 using Random = UnityEngine.Random;
 
 public class CannonTurretAI : Turret
@@ -33,7 +34,7 @@ public class CannonTurretAI : Turret
     [ContextMenu("Shoot")]
     public override void Shoot()
     {
-        Debug.Log("Shooted");
+        // Debug.Log("Shot");
         if (shootTarget == null) return;
         Destroy(Instantiate(ShootParticle ,CannonEndTransform.position, Quaternion.identity),5);
         var bullet = Instantiate(BulletPrefab, ShootTransform.position, ShootTransform.rotation);
@@ -60,8 +61,34 @@ public class CannonTurretAI : Turret
         float v = ComputeInitialVelocity(impulseForce);
         float heightDelta = shootTarget.position.y - ShootTransform.position.y;
         float heightDeltaAngle = (heightDelta / d).tan().atan().degrees();
+        
+        float maxDistance = ComputeDistanceFromAngle(45, v, heightDelta);
 
-        float angle =  ((G * d / v.sqr()).asin().degrees() / 2).clamp(0,360 * UnityMathematicsExtensions.PI);
-        return angle - heightDeltaAngle;
+        float angle = 45;
+        // if (maxDistance >= d) {
+        //     // angle =  ((G * d / v.sqr()).asin().degrees() / 2).clamp(-360, 360 * PI);
+        //     angle = (G * d / v.sqr()).asin().degrees() / 2;
+        //     angle -= heightDeltaAngle;
+        // }
+        angle = angle == float.NaN ? 45 : ((G * d / v.sqr()).asin().degrees() / 2 - heightDeltaAngle).clamp(-45,0);
+        // angle = (G * d / v.sqr()).asin().degrees() / 2;
+        // angle -= heightDeltaAngle;
+        
+        Debug.Log("Angle : " + angle);
+        Debug.Log("Max Distance : " + maxDistance);
+        Debug.Log("Distance : " + d);
+        
+        return angle;
+    }
+
+    float ComputeDistanceFromAngle(float angle, float initialVelocity, float startHeight)
+    {
+        float v = ComputeInitialVelocity(initialVelocity);
+        if (startHeight == 0) {
+            return (v.sqr() / -G) * (2 * angle).sin();
+        }
+        var sinCos = angle.sincos();
+        var vSin = v * sinCos.x;
+        return (v / -G) * sinCos.y * (vSin + (vSin).sqr() + 2 * -G * startHeight);
     }
 }

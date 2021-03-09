@@ -381,9 +381,9 @@ GameObject:
   - component: {fileID: 4951918748915084362}
   - component: {fileID: 1491754790873131383}
   - component: {fileID: 8620983606611283084}
+  - component: {fileID: 6999015270368648202}
   - component: {fileID: 6394542521692997892}
   - component: {fileID: 2218910135369319627}
-  - component: {fileID: 6999015270368648202}
   - component: {fileID: 9116560566375561317}
   m_Layer: 0
   m_Name: MiniTank Prefab
@@ -420,8 +420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NA: {fileID: 6394542521692997892}
-  DestructePaticule: {fileID: 1465521927389598535, guid: 396447ec76a93774abb23682655b010f, type: 3}
-  SmokeParticule: {fileID: 6696071028257133132, guid: 4bdb0b74aa8f7cc4eb805eac49349036, type: 3}
+  DestructionParticle: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
+  SmokeParticle: {fileID: 6696071028257133132, guid: 4bdb0b74aa8f7cc4eb805eac49349036, type: 3}
   Destination: {fileID: 0}
   DestructSounds:
   - {fileID: 8300000, guid: 691c5ad5289517b46aec7920797a4d04, type: 3}
@@ -430,6 +430,7 @@ MonoBehaviour:
   MinDistanceToShoot: 80
   TurretAI: {fileID: 8620983606611283084}
   shootDelay: 2
+  EnableShoot: 1
 --- !u!114 &8620983606611283084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +454,21 @@ MonoBehaviour:
   ShootParticle: {fileID: 5926169790204724843, guid: 241e235fe4c0f7143abd0af58a42d6a5, type: 3}
   ShootForce: 50
   ShootForceRandomness: 5
+--- !u!114 &6999015270368648202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761070880450836208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eec6f0f6d8b6f48b6cf73fad7177e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTouch:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!195 &6394542521692997892
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -488,33 +504,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.558164, y: 1, z: 6.2}
   m_Center: {x: 0, y: 0.8, z: -0.05}
---- !u!114 &6999015270368648202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5761070880450836208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60eec6f0f6d8b6f48b6cf73fad7177e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTutch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1491754790873131383}
-        m_TargetAssemblyTypeName: TankAI, Assembly-CSharp
-        m_MethodName: Dead
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!54 &9116560566375561317
 Rigidbody:
   m_ObjectHideFlags: 0

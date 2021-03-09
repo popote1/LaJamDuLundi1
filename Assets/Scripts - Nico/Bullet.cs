@@ -16,13 +16,14 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.forward = rb.velocity.normalized;
     }
 
     private void OnCollisionEnter(Collision other)
     {
+        Debug.Log("Name = " + other.gameObject);
         Destroy(Instantiate(ExplosionEffect, other.contacts[0].point,Quaternion.LookRotation(other.GetContact(0).normal)), 5);
         Instantiate(Decal, other.contacts[0].point + Vector3.up, Quaternion.Euler(new Vector3(90,0,0)));
         

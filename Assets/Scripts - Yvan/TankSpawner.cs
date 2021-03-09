@@ -9,13 +9,14 @@ public class TankSpawner : MonoBehaviour
     public float DelayToSpawnMin;
     public float DelayToSpawnMax;
 
-    public float _delay = 0 ;
+    public float SpawnDelay = 0 ;
+    public float InitialDelay = 2;
     private float _timer;
     
     
     void Start()
     {
-        _delay = Random.Range(DelayToSpawnMin, DelayToSpawnMax);
+        SpawnDelay = 0;
     }
 
     // Update is called once per frame
@@ -23,13 +24,13 @@ public class TankSpawner : MonoBehaviour
     {
         _timer += Time.deltaTime;
 
-        if (_timer > _delay)
+        if (_timer > SpawnDelay)
         {
             _timer = 0;
             TankAI tank = Instantiate(Tank, transform.position, Tank.transform.rotation);
             tank.Destination = Destination;
             tank.TurretAI.shootTarget = Target;
-            _delay = Random.Range(DelayToSpawnMin, DelayToSpawnMax);
+            SpawnDelay = Random.Range(DelayToSpawnMin, DelayToSpawnMax);
         }
     }
 }

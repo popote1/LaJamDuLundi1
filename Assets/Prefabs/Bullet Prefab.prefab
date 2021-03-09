@@ -113,7 +113,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 2
 --- !u!96 &8676191426425380822
 TrailRenderer:
   serializedVersion: 2
@@ -234,6 +234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionEffect: {fileID: 8206756273771678358, guid: 88fd77cde2b976d46b7a3ba024ffa7cb, type: 3}
-  ExplosionRadius: 5
-  ExplosionForce: 10
+  ExplosionRadius: 0.5
+  ExplosionForce: 5
   Decal: {fileID: 3517320036374375017, guid: 89beaafbf947be64abcdc51ad0f5f99f, type: 3}

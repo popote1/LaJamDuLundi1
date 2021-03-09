@@ -22,6 +22,8 @@ public class TankAI : MonoBehaviour
 
     private float _timer;
     public float shootDelay = 2;
+
+    public bool EnableShoot = true;
     
     void Start()
     {
@@ -44,18 +46,17 @@ public class TankAI : MonoBehaviour
             Physics.Raycast(ray, out var hit, Mathf.Infinity);
             GoTo(hit.point);
         }
-        
-        _timer += Time.deltaTime;
-        if (TurretAI.shootTarget != null)
+
+        if (EnableShoot)
         {
-            if (TurretAI.ComputeShootDistance() < MinDistanceToShoot)
-            {
-                if (_timer > shootDelay)
-                {
-                    TurretAI.Shoot();
-                    _timer = 0;
-                }
-            }
+            _timer += Time.deltaTime;
+            
+            if (TurretAI.shootTarget == null) return;
+            if (TurretAI.ComputeShootDistance() > MinDistanceToShoot) return;
+            if (_timer <= shootDelay) return;
+            
+            TurretAI.Shoot();
+            _timer = 0;
         }
     }
 
@@ -81,7 +82,7 @@ public class TankAI : MonoBehaviour
         Destroy(this);
     }
 
-    IEnumerator TankCoroutine(float delay = 10)
+    IEnumerator TankCoroutine(float delay = 5)
     {
         NA.SetDestination(Destination.position);
         yield return new WaitForSeconds(delay);
