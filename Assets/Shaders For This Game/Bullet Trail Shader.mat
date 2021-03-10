@@ -62,7 +62,8 @@ Material:
     - _EnableFogOnTransparent: 1
     - _OpaqueCullMode: 2
     - _RenderQueueType: 4
-    - _SmokeOffset: 0.7
+    - _ShadowThreshold: 0.5
+    - _SmokeOffset: 0.654
     - _SmokeShape: 0.1
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -83,7 +84,7 @@ Material:
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 1
     - _TransparentZWrite: 0
-    - _UseShadowThreshold: 0
+    - _UseShadowThreshold: 1
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 3
     - _ZTestTransparent: 4

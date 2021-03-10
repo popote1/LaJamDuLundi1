@@ -6,15 +6,14 @@ using Random = UnityEngine.Random;
 
 public class CannonTurretAI : Turret
 {
+    
+    // [Header("Variables")]
+    public float ShootForce = 10f;
+    public float ShootForceRandomness = 1f;
 
     [Header("Prefabs")]
     public GameObject BulletPrefab;
     public GameObject ShootParticle;
-    
-
-    [Header("Variables")]
-    public float ShootForce = 10f;
-    public float ShootForceRandomness = 1f;
 
     // Constants for Ballistic Computation
     private float G => Physics.gravity.y;
@@ -36,7 +35,8 @@ public class CannonTurretAI : Turret
     {
         // Debug.Log("Shot");
         if (shootTarget == null) return;
-        Destroy(Instantiate(ShootParticle ,CannonEndTransform.position, Quaternion.identity),5);
+        float3 r = CannonEndTransform.rotation.eulerAngles;
+        Destroy(Instantiate(ShootParticle ,CannonEndTransform.position, Quaternion.Euler(new float3(r.x + 90, r.yz))),5);
         var bullet = Instantiate(BulletPrefab, ShootTransform.position, ShootTransform.rotation);
         bullet.GetComponent<Rigidbody>().AddForce(ShootTransform.forward * (ShootForce + Random.Range(-ShootForceRandomness, ShootForceRandomness)), ForceMode.Impulse);
     }
@@ -62,7 +62,7 @@ public class CannonTurretAI : Turret
         float heightDelta = shootTarget.position.y - ShootTransform.position.y;
         float heightDeltaAngle = (heightDelta / d).tan().atan().degrees();
         
-        float maxDistance = ComputeDistanceFromAngle(45, v, heightDelta);
+        // float maxDistance = ComputeDistanceFromAngle(45, v, heightDelta);
 
         float angle = 45;
         // if (maxDistance >= d) {
@@ -70,13 +70,17 @@ public class CannonTurretAI : Turret
         //     angle = (G * d / v.sqr()).asin().degrees() / 2;
         //     angle -= heightDeltaAngle;
         // }
-        angle = angle == float.NaN ? 45 : ((G * d / v.sqr()).asin().degrees() / 2 - heightDeltaAngle).clamp(-45,0);
+        
+        angle = ((G * d / v.sqr()).asin().degrees() / 2 - heightDeltaAngle);
+        angle = float.IsNaN(angle) ? -45 : angle;
+        // angle = angle == float.NaN ? 45 : ((G * d / v.sqr()).asin().degrees() / 2 - heightDeltaAngle).clamp(-45,0);
         // angle = (G * d / v.sqr()).asin().degrees() / 2;
         // angle -= heightDeltaAngle;
         
-        Debug.Log("Angle : " + angle);
-        Debug.Log("Max Distance : " + maxDistance);
-        Debug.Log("Distance : " + d);
+        // Debug.Log("Angle : " + angle);
+        // Debug.Log("Max Distance : " + maxDistance);
+        // Debug.Log("Distance : " + d);
+        // Debug.Log(angle);
         
         return angle;
     }

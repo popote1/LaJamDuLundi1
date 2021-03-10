@@ -16,9 +16,10 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
-        transform.forward = rb.velocity.normalized;
+        var velocity = rb.velocity;
+        transform.forward = velocity != Vector3.zero ? velocity.normalized : Vector3.forward;
     }
 
     private void OnCollisionEnter(Collision other)

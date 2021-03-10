@@ -204,7 +204,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.02, y: 0.089072704, z: 2.6}
   m_LocalScale: {x: 0.3, y: 0.3, z: 3}
-  m_Children: []
+  m_Children:
+  - {fileID: 6150865017048640297}
   m_Father: {fileID: 7969232542743024387}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -257,6 +258,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3917305509810304848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6150865017048640297}
+  m_Layer: 0
+  m_Name: Cannon Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6150865017048640297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917305509810304848}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8166327402585602779}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4958274389842778802
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,14 +477,14 @@ MonoBehaviour:
   TurretBaseTransform: {fileID: 7431526958411238076}
   TurretCannonTransform: {fileID: 7969232542743024387}
   ShootTransform: {fileID: 8166327402585602779}
-  CannonEndTransform: {fileID: 8166327402585602779}
+  CannonEndTransform: {fileID: 6150865017048640297}
   shootTarget: {fileID: 0}
   CurrentTarget: {x: 0, y: 0, z: 0}
   RotateSpeed: 0.05
+  ShootForce: 50
+  ShootForceRandomness: 2
   BulletPrefab: {fileID: 3239181935335425080, guid: 7e519797cec6f2a45b6429ae0603b1dc, type: 3}
   ShootParticle: {fileID: 5926169790204724843, guid: 241e235fe4c0f7143abd0af58a42d6a5, type: 3}
-  ShootForce: 50
-  ShootForceRandomness: 5
 --- !u!114 &6999015270368648202
 MonoBehaviour:
   m_ObjectHideFlags: 0
