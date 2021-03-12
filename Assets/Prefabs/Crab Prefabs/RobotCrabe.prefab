@@ -1738,14 +1738,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmitter: {fileID: 0}
+  RaycastEmitter: {fileID: 3907005456218085879}
   FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
   LeverDePatte: 1
-  BurstParticle: {fileID: 0}
+  BurstParticle: {fileID: 6089836917523930597, guid: f7d558d718493d5488a166734f7f2bb4, type: 3}
   IsMoving: 0
-  CanMove: 0
+  CanMove: 1
   PlayAtMove:
     m_PersistentCalls:
       m_Calls:
@@ -2351,14 +2351,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmitter: {fileID: 0}
+  RaycastEmitter: {fileID: 3907005456423915780}
   FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
   LeverDePatte: 1
   BurstParticle: {fileID: 0}
   IsMoving: 0
-  CanMove: 0
+  CanMove: 1
   PlayAtMove:
     m_PersistentCalls:
       m_Calls:
@@ -3738,14 +3738,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmitter: {fileID: 0}
+  RaycastEmitter: {fileID: 3907005456866403326}
   FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
   LeverDePatte: 1
-  BurstParticle: {fileID: 0}
+  BurstParticle: {fileID: 6089836917523930597, guid: f7d558d718493d5488a166734f7f2bb4, type: 3}
   IsMoving: 0
-  CanMove: 0
+  CanMove: 1
   PlayAtMove:
     m_PersistentCalls:
       m_Calls:
@@ -3858,14 +3858,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmitter: {fileID: 0}
+  RaycastEmitter: {fileID: 3907005456907823458}
   FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
   LeverDePatte: 1
-  BurstParticle: {fileID: 0}
+  BurstParticle: {fileID: 6089836917523930597, guid: f7d558d718493d5488a166734f7f2bb4, type: 3}
   IsMoving: 0
-  CanMove: 0
+  CanMove: 1
   PlayAtMove:
     m_PersistentCalls:
       m_Calls:
@@ -5614,14 +5614,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDrawDebug: 1
-  RaycastEmitter: {fileID: 0}
+  RaycastEmitter: {fileID: 3907005457700323150}
   FootPosition: {fileID: 0}
   LegMovementSpeed: 1
   DistanceToMoveFood: 5
   LeverDePatte: 1
-  BurstParticle: {fileID: 0}
+  BurstParticle: {fileID: 6089836917523930597, guid: f7d558d718493d5488a166734f7f2bb4, type: 3}
   IsMoving: 0
-  CanMove: 0
+  CanMove: 1
   PlayAtMove:
     m_PersistentCalls:
       m_Calls:
@@ -6813,6 +6813,18 @@ PrefabInstance:
     - target: {fileID: 8714731099791916165, guid: 8631eb7588cf21d448ad3bf8b4d582ec, type: 3}
       propertyPath: isHitting
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714731100747109733, guid: 8631eb7588cf21d448ad3bf8b4d582ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 123.305664
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714731100747109733, guid: 8631eb7588cf21d448ad3bf8b4d582ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 74.49191
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714731100747109733, guid: 8631eb7588cf21d448ad3bf8b4d582ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -266.84326
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8631eb7588cf21d448ad3bf8b4d582ec, type: 3}
