@@ -51,7 +51,7 @@ public class Clayxel : MonoBehaviour
     }
 
     [ContextMenu("Clear Xels")]
-    void ClearXels()
+    public void ClearXels()
     {
         var children = transform.GetChildren();
         children.Remove(transform);

@@ -29,4 +29,13 @@ public class XelPropertyManager : MonoBehaviour
             x.SpawnXels();
         }
     }
+    
+    [ContextMenu("Clear Xels")]
+    void ClearXels()
+    {
+        foreach (var x in FindObjectsOfType<Clayxel>())
+        {
+            x.ClearXels();
+        }
+    }
 }
